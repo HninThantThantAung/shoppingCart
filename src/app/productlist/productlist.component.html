@@ -1,0 +1,16 @@
+<p>productlist works!</p>
+<ul *ngFor="let product of products; let i = index">
+    <li>{{product.name}}&nbsp;<button (click)="onSelectedProduct(product, i)">Add to Cart</button></li>
+</ul>
+<!-- <ng-container *ngFor = "let product of products; let i = index">
+    <span>{{product.name}}&nbsp;<button (click)="onSelectedProduct(product, i)">Add to Cart</button></span>
+</ng-container> -->
+
+<div *ngIf = "removedProduct">
+    <p>{{removedProduct}} was removed from the cart.</p>
+</div>
+
+<app-shoppingcart [selectedProduct]="getSelectedProduct()"
+(removeEvent)="removeNoti($event)"
+
+></app-shoppingcart>

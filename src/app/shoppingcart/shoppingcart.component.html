@@ -1,0 +1,6 @@
+<ul *ngFor = "let product of selectedProduct; let i = index">
+    <li>{{product.name}}&nbsp;<button (click)="removedProduct(product, i)">Remove</button></li>
+</ul>
+<!-- <ng-container *ngFor = "let product of selectedProduct; let i = index">
+    <span>{{product.name}}&nbsp;<button (click)="removedProduct(product, i)">Remove</button></span>
+</ng-container> -->
